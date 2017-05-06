@@ -32,7 +32,8 @@ const images = {
   confused: require("file-loader!../assets/confused.mp4"),
   eventsOverTimeRed: require("../assets/events-over-time-red.png"),
   eventsOverTimeYellow: require("../assets/events-over-time-yellow.png"),
-  eventsOverTimeBlue: require("../assets/events-over-time-blue.png")
+  eventsOverTimeBlue: require("../assets/events-over-time-blue.png"),
+  jarjar: require("../assets/jarjar.jpg")
 };
 
 const data = {
@@ -59,18 +60,18 @@ colors.tertiaryDark = Color(colors.tertiary).darken(darkenBy);
 colors.quartenaryDark = Color(colors.quartenary).darken(darkenBy);
 
 const styles = {
-  strikethrough: {textDecoration:'line-through', opacity:'0.5'},
+  strikethrough: { textDecoration: 'line-through', opacity: '0.5' },
   keyword: {
     textShadow: '1px 1px 1px #000',
-    color:colors.yellow,
+    color: colors.yellow,
     textTransform: 'uppercase'
   }
 };
 
 const theme = createTheme(colors, {
-    primary: "Montserrat",
-    secondary: "Helvetica"
-  });
+  primary: "Montserrat",
+  secondary: "Helvetica"
+});
 
 export default class Presentation extends React.Component {
   render() {
@@ -241,12 +242,12 @@ export default class Presentation extends React.Component {
           <Layout>
             <Fill>
               <Appear>
-                <Heading size={2} margin="0px 10px 0px"><span style={{color:colors.tertiaryDark}}>Async</span></Heading>
+                <Heading size={2} margin="0px 10px 0px"><span style={{ color: colors.tertiaryDark }}>Async</span></Heading>
               </Appear>
             </Fill>
             <Fill>
               <Appear>
-                <Heading size={2} margin="0px 10px 0px"><span style={{color:colors.tertiaryDark}}>Layered</span></Heading>
+                <Heading size={2} margin="0px 10px 0px"><span style={{ color: colors.tertiaryDark }}>Layered</span></Heading>
               </Appear>
             </Fill>
           </Layout>
@@ -264,19 +265,19 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="codebg">
           <Heading size={1} margin="0px auto 40px" textColor="primary">Callbacks</Heading>
           <Layout style={{ justifyContent: "center" }}>
-            <CodePane style={{minWidth: "0px"}} textSize="32px" lang="javascript" source={require("raw-loader!../assets/snippets/the-callback.es6")}></CodePane>
+            <CodePane style={{ minWidth: "0px" }} textSize="32px" lang="javascript" source={require("raw-loader!../assets/snippets/the-callback.es6")}></CodePane>
           </Layout>
         </Slide>
         <Slide transition={["slide"]} bgColor="codebg">
           <Heading size={1} margin="0px auto 40px" textColor="primary">Callback Hell</Heading>
           <Layout style={{ justifyContent: "center" }}>
-            <CodePane style={{minWidth: "0px"}} textSize="24px" lang="javascript" source={require("raw-loader!../assets/snippets/callback-hell.es6")}></CodePane>
+            <CodePane style={{ minWidth: "0px" }} textSize="24px" lang="javascript" source={require("raw-loader!../assets/snippets/callback-hell.es6")}></CodePane>
           </Layout>
         </Slide>
         <Slide transition={["slide"]} bgColor="codebg">
           <Heading size={1} margin="0px auto 40px" textColor="primary">Promises</Heading>
           <Layout style={{ justifyContent: "center" }}>
-            <CodePane style={{minWidth: "0px"}} textSize="32px" lang="javascript" source={require("raw-loader!../assets/snippets/promises.es6")}></CodePane>
+            <CodePane style={{ minWidth: "0px" }} textSize="32px" lang="javascript" source={require("raw-loader!../assets/snippets/promises.es6")}></CodePane>
           </Layout>
         </Slide>
         <Slide transition={["slide"]}>
@@ -286,7 +287,7 @@ export default class Presentation extends React.Component {
               <Heading size={4} margin="0px auto 10px" textColor="secondary">Immediate</Heading>
             </Appear>
             <Appear>
-              <Heading size={4} margin="0px auto 10px" textColor="secondary">Single Value</Heading>          
+              <Heading size={4} margin="0px auto 10px" textColor="secondary">Single Value</Heading>
             </Appear>
           </Layout>
           <Layout style={{ justifyContent: "space-around" }}>
@@ -411,7 +412,7 @@ export default class Presentation extends React.Component {
             { loc: [12, 15], note: "Execute predicate to determine when to execute 'next'" },
             { loc: [22, 27], note: "Create a new filtered Observable" },
             { loc: [28, 31], note: "Call our new Observable to begin execution" },
-            { loc: [28, 31], note: <CodeRunner code={require("raw-loader!../assets/snippets/basic-observable-operator-pattern.run.1.es6")}></CodeRunner>},
+            { loc: [28, 31], note: <CodeRunner code={require("raw-loader!../assets/snippets/basic-observable-operator-pattern.run.1.es6")}></CodeRunner> },
             { loc: [28, 28], title: "But Wait!", note: "There's more..." },
             { loc: [32, 38], note: "Compose Observables to create new Observables" },
             { loc: [39, 42], note: "Execute the composed Observable" },
@@ -435,7 +436,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="codebg">
           <Heading size={1} margin="0px auto 40px" textColor="primary">The Observer Contract</Heading>
           <Layout style={{ justifyContent: "center" }}>
-            <CodePane style={{minWidth: "0px"}} textSize="32px" lang="typescript" source={require("raw-loader!../assets/snippets/rxjs/observer-interface.ts")}></CodePane>
+            <CodePane style={{ minWidth: "0px" }} textSize="32px" lang="typescript" source={require("raw-loader!../assets/snippets/rxjs/observer-interface.ts")}></CodePane>
           </Layout>
         </Slide>
         <Slide transition={["slide"]}>
@@ -451,7 +452,7 @@ export default class Presentation extends React.Component {
             { loc: [4, 7], note: "Same Observer contract" },
             { loc: [7, 8], note: "Signal that no more values are coming" },
             { loc: [10, 11], note: "Subscribe is more flexible" },
-            { loc: [10, 11], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync.es6")}></CodeRunner>}
+            { loc: [10, 11], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -466,7 +467,7 @@ export default class Presentation extends React.Component {
             { loc: [10, 11], note: ".error()" },
             { loc: [11, 12], note: ".complete()" },
             { loc: [8, 13], note: "Error will not be called" },
-            { loc: [8, 13], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle.es6")}></CodeRunner>}
+            { loc: [8, 13], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -479,7 +480,7 @@ export default class Presentation extends React.Component {
             { loc: [5, 6], note: "Signal to observer some error condition" },
             { loc: [10, 11], note: ".error()" },
             { loc: [8, 13], note: "Complete will not be called" },
-            { loc: [8, 13], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle-error.es6")}></CodeRunner>}
+            { loc: [8, 13], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle-error.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -497,7 +498,7 @@ export default class Presentation extends React.Component {
             { loc: [9, 10], title: "Filter Operator", note: "Allow only values that match predicate" },
             { loc: [11, 12], title: "Map Operator", note: "Transform values" },
             { loc: [12, 15] },
-            { loc: [7, 15], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/map-filter-do.es6")}></CodeRunner>}
+            { loc: [7, 15], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/map-filter-do.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -511,7 +512,7 @@ export default class Presentation extends React.Component {
             { loc: [11, 16], note: "Encapsulate logic into reusable method" },
             { loc: [18, 19], note: "Let me have the WHOLE Observable" },
             { loc: [17, 22], note: "Nice. Clean. Readable." },
-            { loc: [17, 22], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/let.es6")}></CodeRunner>}
+            { loc: [17, 22], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/let.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -523,9 +524,9 @@ export default class Presentation extends React.Component {
             { loc: [1, 3], note: "Import Operators" },
             { loc: [7, 8], note: "Using .let() to encapsulate logging" },
             { loc: [8, 10], note: "Skip the first (N). Take only (N) values." },
-            { loc: [7, 17], title:"Unsubscribe?" },
-            { loc: [14, 17], note:".take() will automatically unsubscribe" },
-            { loc: [7, 17], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/skip-take.es6")}></CodeRunner>}
+            { loc: [7, 17], title: "Unsubscribe?" },
+            { loc: [14, 17], note: ".take() will automatically unsubscribe" },
+            { loc: [7, 17], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/skip-take.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -541,7 +542,7 @@ export default class Presentation extends React.Component {
             { loc: [13, 14], note: "Keep a running total" },
             { loc: [15, 16], note: "Optional seed value" },
             { loc: [8, 22] },
-            { loc: [17, 22], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/scan.es6")}></CodeRunner>}
+            { loc: [17, 22], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/scan.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -557,7 +558,7 @@ export default class Presentation extends React.Component {
             { loc: [12, 13], note: "Switch the stream to a new Observable" },
             { loc: [13, 19], note: "Stream of movies now instead of keypress events" },
             { loc: [8, 19] },
-            { loc: [8, 19], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/switchMap.es6")}></CodeRunner>}
+            { loc: [8, 19], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/switchMap.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <CodeSlide
@@ -575,7 +576,7 @@ export default class Presentation extends React.Component {
             { loc: [13, 15], note: "Observables of Observables" },
             { loc: [15, 18], note: "Merge all streams together" },
             { loc: [8, 18] },
-            { loc: [8, 18], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.es6")}></CodeRunner>}
+            { loc: [8, 18], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
         <Slide transition={["slide"]} bgColor="tertiary">
@@ -605,7 +606,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Heading size={1} margin="0px 0 40px" fit caps lineHeight={1} textColor="primary">
-            And RxJS
+              And RxJS
             </Heading>
           </Appear>
           <Appear>
@@ -614,17 +615,57 @@ export default class Presentation extends React.Component {
             </Text>
           </Appear>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            Demos
+          </Heading>
+          <Layout style={{ flexDirection: "column" }}>
+            <Text size={1} margin="20px 0px" bold>
+              <Link href="/demo-typeahead.html">Type Ahead</Link>
+            </Text>
+            <Text size={1} margin="20px 0px" bold>
+              <Link href="/demo-redux.html" fit>Redux</Link>
+            </Text>
+            <Text size={1} margin="20px 0px" bold>
+              Crazy Requirements Demo (next slide)
+            </Text>
+            <Text size={1} margin="20px 0px" bold>
+              <Link href="/demo-trailing-letters.html" fit>Trailing Letters</Link>
+            </Text>
+          </Layout>
+        </Slide>
         <CodeSlide
           transition={[]}
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}
           ranges={[
-            { loc: [0, 0], title: "Merge Map" },
-            { loc: [6, 15] },
-            { loc: [6, 15], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}></CodeRunner>}
+            { loc: [0, 0], title: "Crazy Demo" },
+            { loc: [4, 7], note: "Same list of episodes asynchronous" },
+            { loc: [8, 10], note: "Again... do we really have to say it?" },
+            { loc: [8, 10], title: "*cough*", note: <NoteImage src={images.jarjar} /> },
+            { loc: [11, 14], note: "Get episodes and characters" },
+            { loc: [21, 22], note: "Get only male characters" },            
+            { loc: [22, 23], note: "Group by character id" },
+            { loc: [23, 25], note: "Reduce into arrays of characters" },
+            { loc: [25, 29], note: "Map to character name and count of moves seen in" },
+            { loc: [29, 33], note: "Print the final results" },
+            { loc: [14, 21], note: "Retry on failure" },
+            { loc: [14, 21], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}></CodeRunner> },
+            { loc: [0, 0], title: "But Wait!" },
+            { loc: [0, 0], title: "Network?" },
+            { loc: [14, 21], note: "Retry on failure" },
+            { loc: [14, 21], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}></CodeRunner> }
           ]}>
         </CodeSlide>
       </Deck>
     );
   }
+}
+
+function NoteImage(props) {
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <img {...props} />
+    </div>
+  );
 }
