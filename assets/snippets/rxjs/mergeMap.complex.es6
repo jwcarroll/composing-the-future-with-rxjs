@@ -29,3 +29,6 @@ function onlyTheGoodOnes(obs){
   return obs.filter(
     v => _.some([4,5,6], id => id === v));
 }
+
+
+

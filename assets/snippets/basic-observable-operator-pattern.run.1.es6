@@ -29,3 +29,7 @@ const EvenNumbers = Filter(Observable, val => {
 EvenNumbers({
     next: val => console.stream('even').log(val)
 });
+
+
+
+

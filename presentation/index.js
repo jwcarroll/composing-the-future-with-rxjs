@@ -331,7 +331,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/simple-observable.es6")}
           ranges={[
-            { loc: [0, 8], title: "Enter The Observable" },
+            { loc: [0, 0], title: "Enter The Observable" },
             { loc: [0, 1], note: "Import Observable from rxjs to avoid bringing in entire library" },
             { loc: [2, 4], note: "Create an observable from a DOM event" },
             { loc: [5, 6], note: "Observables are lazy" },
@@ -344,7 +344,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/simple-observable-with-filter.es6")}
           ranges={[
-            { loc: [0, 13], title: "Chaining and Operators" },
+            { loc: [0, 0], title: "Chaining and Operators" },
             { loc: [6, 13] },
             { loc: [7, 8], note: "Transform values with map" },
             { loc: [9, 10], note: "Capture only the vowels" },
@@ -372,7 +372,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/basic-observable-pattern.es6")}
           ranges={[
-            { loc: [0, 12], title: "Basic Observable Pattern" },
+            { loc: [0, 0], title: "Basic Observable Pattern" },
             { loc: [0, 8], note: "Simple callback pattern" },
             { loc: [1, 4], note: "Synchronous Values" },
             { loc: [5, 7] },
@@ -385,7 +385,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/basic-observable-pattern-async.es6")}
           ranges={[
-            { loc: [0, 21], title: "Async Observable" },
+            { loc: [0, 0], title: "Async Observable" },
             { loc: [0, 12] },
             { loc: [4, 5], note: "Calback pattern is identical" },
             { loc: [3, 6], note: "Asynchronous Values" },
@@ -400,7 +400,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/basic-observable-operator-pattern.es6")}
           ranges={[
-            { loc: [0, 42], title: "Observable Operators" },
+            { loc: [0, 0], title: "Observable Operators" },
             { loc: [0, 7], note: "Basic observable pattern" },
             { loc: [8, 8], title: "What is an Operator?" },
             { loc: [8, 9], note: "Accepts a source Observable" },
@@ -446,7 +446,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/simple-sync.es6")}
           ranges={[
-            { loc: [0, 11], title: "Creating Observables" },
+            { loc: [0, 0], title: "Creating Observables" },
             { loc: [3, 4], note: "Class instead of function" },
             { loc: [4, 7], note: "Same Observer contract" },
             { loc: [7, 8], note: "Signal that no more values are coming" },
@@ -459,7 +459,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle.es6")}
           ranges={[
-            { loc: [0, 13], title: "Lifecycle Methods" },
+            { loc: [0, 0], title: "Lifecycle Methods" },
             { loc: [4, 6] },
             { loc: [9, 12], note: "Callbacks for each message type" },
             { loc: [9, 10], note: ".next()" },
@@ -474,7 +474,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/simple-sync-lifecycle-error.es6")}
           ranges={[
-            { loc: [0, 13], title: "Errors" },
+            { loc: [0, 0], title: "Errors" },
             { loc: [2, 7] },
             { loc: [5, 6], note: "Signal to observer some error condition" },
             { loc: [10, 11], note: ".error()" },
@@ -487,7 +487,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/map-filter-do.es6")}
           ranges={[
-            { loc: [0, 19], title: "Basic Operators" },
+            { loc: [0, 0], title: "Basic Operators" },
             { loc: [1, 4], note: "Import only the operators you care about!" },
             { loc: [5, 6], note: "Generate some asynchronous numbers" },
             { loc: [7, 15], note: "Class enables operator chaining" },
@@ -505,7 +505,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/let.es6")}
           ranges={[
-            { loc: [0, 26], title: "More About Let" },
+            { loc: [0, 0], title: "More About Let" },
             { loc: [3, 4], note: "Import Operators" },
             { loc: [7, 10], note: "Logic is hard to read. Not reusable." },
             { loc: [11, 16], note: "Encapsulate logic into reusable method" },
@@ -519,7 +519,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/skip-take.es6")}
           ranges={[
-            { loc: [0, 17], title: "Skip and Take" },
+            { loc: [0, 0], title: "Skip and Take" },
             { loc: [1, 3], note: "Import Operators" },
             { loc: [7, 8], note: "Using .let() to encapsulate logging" },
             { loc: [8, 10], note: "Skip the first (N). Take only (N) values." },
@@ -533,7 +533,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/scan.es6")}
           ranges={[
-            { loc: [0, 16], title: "Scan", note: "AKA Reduce" },
+            { loc: [0, 0], title: "Scan", note: "AKA Reduce" },
             { loc: [1, 2], note: "Import Operators" },
             { loc: [4, 7] },
             { loc: [9, 17], note: "Accumulate values and emit each result" },
@@ -619,7 +619,7 @@ export default class Presentation extends React.Component {
           lang="js"
           code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}
           ranges={[
-            { loc: [0, 19], title: "Merge Map" },
+            { loc: [0, 0], title: "Merge Map" },
             { loc: [6, 15] },
             { loc: [6, 15], note: <CodeRunner code={require("raw-loader!../assets/snippets/rxjs/mergeMap.complex.es6")}></CodeRunner>}
           ]}>

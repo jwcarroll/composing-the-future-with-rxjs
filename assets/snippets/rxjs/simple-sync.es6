@@ -9,3 +9,6 @@ const myObservable$ =
   });
 
 myObservable$.subscribe(val => console.log(val));
+
+
+
