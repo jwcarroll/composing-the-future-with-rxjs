@@ -1,7 +1,6 @@
 import { Observable } from 'rxjs/Observable';
 import "rxjs/add/observable/fromPromise";
-
-const api = 'http://localhost:4000';
+import {swapiUrl as api} from '../config/config';
 
 class StarWarsService {
   getEpisode(episodeNumber){
