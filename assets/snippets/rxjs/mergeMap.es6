@@ -10,7 +10,7 @@ episodes$
   .let(log())
   .let(onlyTheGoodOnes)
   .let(log('Filtered'))
-  .switchMap(id => starWarsService.getEpisode(id))
+  .mergeMap(id => starWarsService.getEpisode(id))
   .mergeMap(mov => Observable.from(mov.planets))
   .mergeMap(id => starWarsService.getPlanet(id))
   .subscribe(planet => {

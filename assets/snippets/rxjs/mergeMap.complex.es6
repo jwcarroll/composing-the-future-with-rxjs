@@ -9,7 +9,7 @@ const episodes$ =
 episodes$
   .let(onlyTheGoodOnes)
   .let(log())
-  .switchMap(id => starWarsService.getEpisode(id))
+  .mergeMap(id => starWarsService.getEpisode(id))
   .mergeMap(mov => Observable.from(mov.characters))
   .mergeMap(id => starWarsService.getCharacter(id))
   .retryWhen(errors =>
@@ -20,7 +20,7 @@ episodes$
       .delay(5000)
   )
   .filter(char => char.gender === "male")
-  .groupBy(char => char.id)
+  .groupBy(char => char.name)
   .mergeMap(g =>
     g.reduce((acc, curr) => [...acc, curr], []))
   .map(arr => ({
