@@ -6,25 +6,25 @@ var webpack = require("webpack");
 module.exports = {
   devtool: "source-map",
   entry: {
-    presentation:[
+    presentation: [
       "whatwg-fetch",
       "webpack-hot-middleware/client",
       "babel-polyfill",
       "./index"
     ],
-    'demo-typeahead':[
+    'demo-typeahead': [
       "whatwg-fetch",
       "webpack-hot-middleware/client",
       "babel-polyfill",
       "./demo-typeahead"
     ],
-    'demo-redux':[
+    'demo-redux': [
       "whatwg-fetch",
       "webpack-hot-middleware/client",
       "babel-polyfill",
       "./demo-redux"
     ],
-    'demo-trailing-letters':[
+    'demo-trailing-letters': [
       "whatwg-fetch",
       "webpack-hot-middleware/client",
       "babel-polyfill",
@@ -38,7 +38,12 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+        "NODE_ENV": JSON.stringify("development")
+      }
+    }),
   ],
   module: {
     loaders: [{

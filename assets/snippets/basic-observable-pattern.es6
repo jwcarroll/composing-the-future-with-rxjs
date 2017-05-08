@@ -10,3 +10,7 @@ const Observable = (observer) => {
 Observable({
     next:val => console.log(val)
 });
+
+
+
+

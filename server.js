@@ -20,23 +20,23 @@ app.use(require("webpack-dev-middleware")(compiler, {
 
 app.use(require("webpack-hot-middleware")(compiler));
 
-app.get("/styles/prism-tomorrow.css", function(req, res) {
+app.get("/assets/styles/prism-tomorrow.css", function(req, res) {
   res.sendFile(path.join(__dirname, "/assets/styles/prism-tomorrow.1.3.0.css"));
 });
 
-app.get("/scripts/prism.js", function(req, res) {
+app.get("/assets/scripts/prism.js", function(req, res) {
   res.sendFile(path.join(__dirname, "/assets/scripts/prism.js"));
 });
 
-app.get("/demo-typeahead", function(req, res) {
+app.get("/demo-typeahead.html", function(req, res) {
   res.sendFile(path.join(__dirname, "demo-typeahead.html"));
 });
 
-app.get("/demo-redux", function(req, res) {
+app.get("/demo-redux.html", function(req, res) {
   res.sendFile(path.join(__dirname, "demo-redux.html"));
 });
 
-app.get("/demo-trailing-letters", function(req, res) {
+app.get("/demo-trailing-letters.html", function(req, res) {
   res.sendFile(path.join(__dirname, "demo-trailing-letters.html"));
 });
 
